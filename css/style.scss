@@ -1,0 +1,326 @@
+// Import function, variables, mixin from Bootstrap
+@import "../Bootstrap/node_modules/bootstrap/scss/functions";
+@import "../Bootstrap/node_modules/bootstrap/scss/variables";
+@import "../Bootstrap/node_modules/bootstrap/scss/mixins";
+
+@import "./helper/variables";
+@import "./helper/utilities";
+@import "./helper/mixins";
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Start Header */
+.navbar {
+  background-color: $main-color;
+  .navbar-nav {
+    .nav-link {
+      color: $gray-500;
+    }
+    .nav-link.active,
+    .nav-link:hover,
+    .nav-link:focus {
+      color: $green;
+    }
+  }
+  .search {
+    border-left: 1px solid $green;
+    svg {
+      color: $green;
+    }
+  }
+  .navbar-toggler {
+    color: #fff;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+/* End Header */
+/* Start Landing */
+section.landing {
+  background-color: $main-color;
+  height: calc(60vh);
+  .text-center {
+    h1 {
+      font-size: 3.2rem;
+      @include breakPoints(mobile) {
+        font-size: 2.2rem;
+      }
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+// /* End Landing */
+// /* Start Feature */
+section.feature {
+  #header_1 {
+    opacity: 0;
+  }
+  .row {
+    figure {
+      .icons {
+        height: 200px;
+      }
+      svg {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      svg:first-child {
+        color: $section-color;
+      }
+      svg:last-child {
+        color: $green;
+      }
+    }
+    figcaption {
+      h3 {
+        color: $yellow;
+      }
+    }
+  }
+}
+/* End Feature */
+/* Start portfolio */
+section.portfolio {
+  background-color: $section-color;
+  .container {
+    opacity: 0;
+  }
+  ul {
+    padding-bottom: 10px;
+    .active {
+      background-color: $red;
+      border-radius: 0.5rem;
+      color: $yellow;
+    }
+    li {
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      margin: 5px;
+      cursor: pointer;
+      &:hover a {
+        color: $yellow;
+      }
+      &:hover {
+        background-color: #ff315091;
+      }
+      a {
+        transition: 0.3s;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      @include breakPoints(mobile) {
+        margin: 1px;
+        padding: 0.35rem 0.8rem;
+      }
+    }
+  }
+  .image {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: attr(data-work);
+      position: absolute;
+      background-color: rgb(51 209 204 / 76%);
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      display: grid;
+      place-content: center;
+      font-weight: bold;
+      transition: 0.3s;
+      color: #fff;
+      transform: translateX(calc(-100% - 5px));
+    }
+    &:hover::before {
+      transform: translateX(0);
+    }
+    img {
+      padding: 5px;
+    }
+  }
+}
+/* End portfolio */
+/*  Start Stuff*/
+section.stuff {
+  .container {
+    > {
+      p {
+        max-width: 600px;
+      }
+    }
+    h3 {
+      font-size: 2.5rem;
+      color: $green;
+    }
+    button {
+      padding: 0.6rem 2.7rem;
+    }
+  }
+}
+/*  End Stuff*/
+/* Start Our Team*/
+section.our-team {
+  background-color: $section-color;
+  .container {
+    > {
+      p {
+        margin-top: 1rem;
+        margin-inline: 10rem;
+        padding-bottom: 2.5rem;
+        @include breakPoints(mobile) {
+          margin-inline: 2.5rem;
+        }
+      }
+    }
+    figure {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      .image {
+        position: relative;
+        height: 120%;
+        &::before {
+          content: attr(data-team);
+          position: absolute;
+          font-size: 1.3rem;
+          bottom: -50px;
+          left: 0;
+          background-color: $green;
+          width: 100%;
+          height: 20%;
+          z-index: 10;
+          color: #fff;
+          display: grid;
+          place-content: center;
+          @include breakPoints("medium") {
+            bottom: -43px;
+          }
+          @include breakPoints("small") {
+            bottom: -43px;
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+      figcaption {
+        padding-top: 70px;
+        padding-bottom: 15px;
+        background-color: #fff;
+        @include breakPoints("medium") {
+          padding-top: 60px;
+        }
+        @include breakPoints("small") {
+          padding-top: 57px;
+        }
+      }
+    }
+  }
+}
+/* End Our Team*/
+/* Start Project */
+section.projects {
+  background-color: $main-color;
+  button {
+    padding: 0.6rem 2.7rem;
+  }
+}
+/* End Project */
+/* Start  Our Blog */
+section.our-blog {
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border: none;
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  button {
+    padding: 0.6rem 2.7rem;
+  }
+}
+/* End Our Blog */
+/* Start Subscribe */
+section.subscribe {
+  background-color: $yellow;
+  form {
+    .text {
+      color: $gray-700;
+      @include breakPoints(mobile) {
+        margin-bottom: 2rem;
+      }
+    }
+    .email {
+      border: none;
+      border-bottom: 1px solid #fff;
+    }
+    .email:focus {
+      // color: #fff;
+      outline: none;
+    }
+    ::placeholder {
+      color: #fff;
+    }
+    .submit {
+      padding: 0.6rem 2.7rem;
+      background-color: $main-color;
+      color: $yellow;
+      @include breakPoints(mobile) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  ul {
+    li {
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    li:hover {
+      transform: translateX(10px);
+    }
+  }
+  .copyright {
+    span {
+      color: $yellow;
+    }
+    @include breakPoints(mobile) {
+      margin-bottom: 15px;
+    }
+  }
+  background-color: $main-color;
+  .facebook {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 0.6rem 0.6rem;
+  }
+  .twitter {
+    background-color: #1ec4ff;
+    color: #fff;
+    padding: 0.6rem 0.6rem;
+  }
+  .github {
+    background-color: #333;
+    color: #fff;
+    padding: 0.6rem 0.6rem;
+  }
+  .linked-in {
+    background-color: #004182;
+    color: #fff;
+    padding: 0.6rem 0.6rem;
+  }
+}
+/* End Footer */

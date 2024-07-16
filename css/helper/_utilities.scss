@@ -1,0 +1,49 @@
+// Scroll Bar
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  position: relative;
+  background-color: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+// All Main Button In Page
+.main-btn {
+  padding-block: 0.6rem;
+  padding-inline: 3rem;
+  border-radius: 0.7rem;
+}
+// Main Header
+section {
+  .main-header {
+    figure {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8.5rem;
+        height: 1px;
+        background-color: $green;
+      }
+      figcaption {
+        h2 {
+          font-size: 2.3rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
