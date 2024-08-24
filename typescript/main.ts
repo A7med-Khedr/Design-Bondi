@@ -18,14 +18,14 @@ ScrollReveal().reveal("#p_1", {
   delay: 1850,
   distance: "30px",
   origin: "bottom",
-  duration: 2000,
+  duration: 1500,
 });
 
 ScrollReveal().reveal("#button_1", {
   delay: 2600,
   distance: "30px",
-  origin: "top",
-  duration: 2000,
+  origin: "bottom",
+  duration: 1500,
 });
 
 const port = document.querySelector(".portfolio");
@@ -38,22 +38,22 @@ $(() => {
   });
 });
 ScrollReveal().reveal("#card_1", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 500,
+  delay: 300,
 });
 ScrollReveal().reveal("#card_2", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 1000,
+  delay: 600,
 });
 ScrollReveal().reveal("#card_3", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 1500,
+  delay: 900,
 });
 $(() => {
   window.addEventListener("scroll", () => {
@@ -62,73 +62,86 @@ $(() => {
     }
   });
 });
-ScrollReveal().reveal("#aboutText", {
-  duration: 2000,
-  origin: "left",
-  distance: "100px",
-  delay: 800,
-});
-ScrollReveal().reveal("#aboutImg", {
-  duration: 2000,
-  origin: "right",
-  distance: "100px",
-  delay: 1500,
-});
-ScrollReveal().reveal("#header_2", {
-  duration: 2000,
-  origin: "bottom",
-  distance: "100px",
-});
 ScrollReveal().reveal("#aboutP", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
   delay: 300,
 });
+ScrollReveal().reveal("#aboutText", {
+  duration: 1500,
+  origin: "left",
+  distance: "100px",
+  delay: 600,
+});
+ScrollReveal().reveal("#aboutImg", {
+  duration: 1500,
+  origin: "right",
+  distance: "100px",
+  delay: 1100,
+});
+ScrollReveal().reveal("#header_2", {
+  duration: 1500,
+  origin: "bottom",
+  distance: "100px",
+});
+
 ScrollReveal().reveal("#teamText", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
 });
 
 ScrollReveal().reveal(`#teamImg1`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 500,
+  delay: 300,
 });
 ScrollReveal().reveal(`#teamImg2`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 1000,
+  delay: 600,
 });
 ScrollReveal().reveal(`#teamImg3`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 1500,
+  delay: 900,
 });
 ScrollReveal().reveal(`#teamImg4`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 2000,
+  delay: 1200,
 });
 ScrollReveal().reveal(`#header_3`, {
-  duration: 2000,
-  origin: "top",
-  distance: "100px",
-});
-ScrollReveal().reveal(`#blogRow`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
-  delay: 500,
+});
+ScrollReveal().reveal(`.blogRow-1`, {
+  duration: 1500,
+  origin: "bottom",
+  distance: "100px",
+  delay: 300,
+});
+ScrollReveal().reveal(`.blogRow-2`, {
+  duration: 1500,
+  origin: "bottom",
+  distance: "100px",
+  delay: 600,
+});
+ScrollReveal().reveal(`.blogRow-3`, {
+  duration: 1500,
+  origin: "bottom",
+  distance: "100px",
+  delay: 900,
 });
 ScrollReveal().reveal(`#blogButton`, {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
-  distance: "100px",
-  delay: 1000,
+  distance: "50px",
+  delay: 1100,
 });
